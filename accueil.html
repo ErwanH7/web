@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- En-tête -->
+    <header>
+        <a class="menu" href="#">
+            <img src="images/menu.png" alt="Accès au menu" id="hamburger-icon">
+        </a>
+        <a href="accueil.html" class="logo">
+            <img src="images/LOGO-MOCK-UP.png" alt="Logo">
+        </a>
+        <input type="text" class="searchTerm" placeholder="Rechercher">
+        <a class="panier" href="#">
+            <img src="images/panier.png" alt="Accès au panier">
+        </a>
+    </header>
+
+    <!-- Menu Hamburger -->
+    <nav id="hamburger-menu">
+        <a href="réparer.html">Réparer</a>
+        <a href="#">Vendre</a>
+        <a href="composition.html">Composer</a>
+        <a href="acheter.html">Acheter</a>
+    </nav>
+
+
+    <!-- Contenu principal -->
+    <main id="main-accueil">
+        <section id="nouveau">
+            <h2 class="txt-accueil">NOUVEAU</h2>
+            <ul class="ul-accueil">
+                <li class="li-accueil">
+                    <img src="images/intel-arc-b580.png" alt="Produit 1">
+                    <p class="product-title">Intel ArcB580</p>
+                </li>
+                <li class="li-accueil">
+                    <img src="images/MPG-272URX-QD-OLED.png" alt="Produit 2">
+                    <p class="product-title">MPG 272URX QD-OLED2</p>
+                </li>
+                <li class="li-accueil">
+                    <img src="images/ROG-G700.png" alt="Produit 3">
+                    <p class="product-title">ROG G700</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="populaires">
+            <h2 class="txt-accueil">POPULAIRES</h2>
+            <ul class="ul-accueil">
+                <li class="li-accueil">
+                    <img src="images/inno3d-geforce-rtx-3060-twin-x2-8g.png" alt="Produit 4">
+                    <p class="product-title">inno3d-geforce-rtx-3060-twin-x2-8g</p>
+                </li>
+                <li class="li-accueil">
+                    <img src="images/Lenovo-Legion-Pro-5-16IRX9.png" alt="Produit 5">
+                    <p class="product-title">Lenovo Legion Pro 5 16IRX9</p>
+                </li>
+                <li class="li-accueil">
+                    <img src="images/RM650.png" alt="Produit 6">
+                    <p class="product-title">Corsair RM 650</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+
+        hamburgerIcon.addEventListener('click', function () {
+            hamburgerMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>
