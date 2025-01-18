@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>page de réparation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- En-tête -->
+    <header>
+        <a class="menu" href="#">
+            <img src="images/menu.png" alt="Accès au menu" id="hamburger-icon">
+        </a>
+        <a href="accueil.html" class="logo">
+            <img src="images/LOGO-MOCK-UP.png" alt="Logo">
+        </a>
+        <input type="text" class="searchTerm" placeholder="Rechercher">
+        <a class="panier" href="#">
+            <img src="images/panier.png" alt="Accès au panier">
+        </a>
+    </header>
+
+    <!-- Menu Hamburger -->
+    <nav id="hamburger-menu">
+        <a href="réparer.html">Réparer</a>
+        <a href="#">Vendre</a>
+        <a href="composition.html">Composer</a>
+        <a href="acheter.html">Acheter</a>
+    </nav>
+
+    <!-- Contenu principal -->
+    <section class="rectangle">
+        <img src="images/ordinateur.png" alt="Image" class="image-rectangle">
+        <p> UNIQUEMENT CHEZ PROTECH</p>
+        <h1>FAITES RÉPARER VOTRE PC</h1>
+        <p>rapidement et proche de chez vous !</p>
+    </section>
+
+    <main id="main-content">
+        <form action="#" method="post" id="repair-form">
+            <!-- Section pour le type d'ordinateur -->
+            <section class="form-section" id="computer-type-section">
+                <h2 class="titre-deplacement" id="computer-type-title">Quel type d'ordinateur avez-vous ?</h2>
+                
+                <!-- Liste d'options : Ordinateur fixe et portable -->
+                <ul class="options-list" id="computer-options-list">
+                    <li id="desktop-option">
+                        <label>
+                            <input type="radio" name="type" value="fixe" id="desktop-radio">
+                            <img src="images/fixe.png" alt="Ordinateur fixe">
+                            Fixe
+                        </label>
+                    </li>
+                    <li id="laptop-option">
+                        <label>
+                            <input type="radio" name="type" value="portable" id="laptop-radio">
+                            <img src="images/portable.png" alt="Ordinateur portable">
+                            Portable
+                        </label>
+                    </li>
+                </ul>
+            </section>
+    
+            <!-- Section pour décrire le problème -->
+            <section class="form-section" id="problem-description-section">
+                <h2 id="problem-description-title">Décrivez le problème rencontré</h2>
+                <textarea name="problem" rows="5" placeholder="Décrivez votre problème ici..." id="problem-description"></textarea>
+            </section>
+
+            <!-- Section avec les boutons -->
+            <section class="form-buttons" id="form-buttons-section">
+                <h2 class="sr-only" id="form-actions-title">Actions du formulaire</h2>
+                <button class="bouton-arrondi" id="cancel-button">ANNULER</button>
+                <button class="bouton-arrondi" id="next-button">SUIVANT</button>
+            </section>
+        </form>
+    </main>
+
+
+    <script>
+        // Fonction pour ouvrir/fermer le menu
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+
+        hamburgerIcon.addEventListener('click', function() {
+            hamburgerMenu.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>
